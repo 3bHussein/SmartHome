@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SmartHomeDBModelStoreContainer" CdmEntityContainer="SmartHomeDBEntities">
+    <EntitySetMapping Name="FilterTBs">
+      <EntityTypeMapping TypeName="SmartHomeDBModel.FilterTB">
+        <MappingFragment StoreEntitySet="FilterTB">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="NameOfLevel" ColumnName="NameOfLevel" />
+          <ScalarProperty Name="StartData" ColumnName="StartData" />
+          <ScalarProperty Name="EndData" ColumnName="EndData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HmoneyManagmentTbs">
+      <EntityTypeMapping TypeName="SmartHomeDBModel.HmoneyManagmentTb">
+        <MappingFragment StoreEntitySet="HmoneyManagmentTb">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DataOFTake" ColumnName="DataOFTake" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

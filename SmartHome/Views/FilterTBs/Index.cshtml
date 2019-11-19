@@ -1,0 +1,50 @@
+﻿@model IEnumerable<SmartHome.Models.FilterTB>
+
+
+@using PagedList;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+
+<p>
+    @Html.ActionLink("Create New", "Create",null,new { @class="btn btn-info"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NameOfLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartData)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndData)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="">
+            <td>
+                @Html.DisplayFor(modelItem => item.NameOfLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndData)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-success" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-warning" })
+            </td>
+        </tr >
+    }
+
+</table >
+@Html.PagedListPager((IPagedList)Model, a => Url.Action("index", new { Page = a }), PagedListRenderOptions.ClassicPlusFirstAndLast)
+
